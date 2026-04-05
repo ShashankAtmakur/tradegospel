@@ -1,0 +1,111 @@
+
+# Create detailed project structure
+project_structure = """
+admin-analytics-dashboard/
+├── .env.local                          # Environment variables (MongoDB URI, JWT Secret)
+├── .gitignore                          # Git ignore file
+├── package.json                        # Project dependencies
+├── tsconfig.json                       # TypeScript configuration
+├── tailwind.config.ts                  # Tailwind CSS configuration
+├── next.config.js                      # Next.js configuration
+├── README.md                           # Project documentation
+│
+├── src/
+│   ├── app/                            # Next.js 15 App Router
+│   │   ├── layout.tsx                  # Root layout with providers
+│   │   ├── page.tsx                    # Landing page (redirect to login/dashboard)
+│   │   │
+│   │   ├── (auth)/                     # Authentication route group
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx            # Login page
+│   │   │   └── register/
+│   │   │       └── page.tsx            # Register page (optional)
+│   │   │
+│   │   ├── (dashboard)/                # Protected dashboard route group
+│   │   │   ├── layout.tsx              # Dashboard layout (sidebar + header)
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.tsx            # Main dashboard page
+│   │   │   └── admin/
+│   │   │       └── page.tsx            # Admin-only page
+│   │   │
+│   │   └── api/                        # API Routes
+│   │       ├── auth/
+│   │       │   ├── login/
+│   │       │   │   └── route.ts        # POST /api/auth/login
+│   │       │   ├── register/
+│   │       │   │   └── route.ts        # POST /api/auth/register
+│   │       │   └── me/
+│   │       │       └── route.ts        # GET /api/auth/me
+│   │       │
+│   │       ├── analytics/
+│   │       │   ├── users/
+│   │       │   │   └── route.ts        # GET /api/analytics/users
+│   │       │   ├── cv-analysis/
+│   │       │   │   └── route.ts        # GET /api/analytics/cv-analysis
+│   │       │   ├── feedback/
+│   │       │   │   └── route.ts        # GET /api/analytics/feedback
+│   │       │   └── top-users/
+│   │       │       └── route.ts        # GET /api/analytics/top-users
+│   │       │
+│   │       └── seed/
+│   │           └── route.ts            # POST /api/seed (seed sample data)
+│   │
+│   ├── components/                     # Reusable components
+│   │   ├── ui/                         # ShadCN UI components
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── table.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   └── ... (other ShadCN components)
+│   │   │
+│   │   ├── dashboard/                  # Dashboard-specific components
+│   │   │   ├── Sidebar.tsx             # Navigation sidebar
+│   │   │   ├── Header.tsx              # Dashboard header
+│   │   │   ├── KPICard.tsx             # Key Performance Indicator card
+│   │   │   ├── CountryChart.tsx        # Country-wise user distribution
+│   │   │   ├── CVTrendChart.tsx        # CV analysis trend line chart
+│   │   │   ├── PaidVsFreeChart.tsx     # Paid vs free users donut chart
+│   │   │   ├── CareerStageChart.tsx    # Career stage breakdown bar chart
+│   │   │   ├── FeedbackChart.tsx       # Feedback analytics
+│   │   │   └── TopUsersTable.tsx       # Top CV scorers leaderboard
+│   │   │
+│   │   └── auth/                       # Authentication components
+│   │       ├── LoginForm.tsx           # Login form component
+│   │       └── ProtectedRoute.tsx      # Route protection wrapper
+│   │
+│   ├── lib/                            # Utility functions and configs
+│   │   ├── db/
+│   │   │   ├── connection.ts           # MongoDB connection utility
+│   │   │   └── models/                 # Mongoose models
+│   │   │       ├── User.ts             # User model
+│   │   │       ├── CVAnalysis.ts       # CV Analysis model
+│   │   │       └── Feedback.ts         # Feedback model
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── jwt.ts                  # JWT token utilities
+│   │   │   └── password.ts             # Password hashing utilities
+│   │   │
+│   │   └── utils.ts                    # General utility functions
+│   │
+│   ├── middleware.ts                   # Next.js middleware for auth
+│   │
+│   └── types/                          # TypeScript type definitions
+│       ├── user.ts                     # User types
+│       ├── analytics.ts                # Analytics types
+│       └── api.ts                      # API response types
+│
+└── public/                             # Static assets
+    ├── images/
+    └── icons/
+"""
+
+with open('project_structure.txt', 'w') as f:
+    f.write(project_structure)
+
+print("Project Structure Documentation created successfully!")
+print("\nKey Directories:")
+print("  - src/app/ : Next.js 15 App Router with route groups")
+print("  - src/components/ : Reusable React components")
+print("  - src/lib/ : Utilities, DB models, and auth logic")
+print("  - API Routes: Authentication & Analytics endpoints")

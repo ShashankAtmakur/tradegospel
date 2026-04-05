@@ -1,0 +1,14 @@
+Component,Technology,Purpose,Key Features,Learning Curve
+Frontend Framework,Next.js 15,React framework with SSR,"App Router, Server Components, API Routes, TypeScript support",Medium
+UI Library,ShadCN UI,Component library,"Accessible, customizable, Radix UI based, Tailwind CSS",Low
+Styling,Tailwind CSS,Utility-first CSS,"Rapid styling, responsive design, dark mode support",Low-Medium
+Charts - Option 1,Recharts,React charting library,"Composable, React-native, built on D3, TypeScript support",Low
+Charts - Option 2,Chart.js,Canvas-based charts,"Lightweight, simple API, good for large datasets",Low
+Charts - Option 3,ECharts,Apache charting library,"High performance, canvas rendering, extensive chart types",Medium
+Backend Runtime,Node.js,JavaScript runtime,"Fast, non-blocking I/O, large ecosystem",Low
+Backend Framework,Express.js (in API routes),Web framework,"Minimal, flexible, middleware support",Low
+Database,MongoDB,NoSQL database,"Flexible schema, document-based, scalable",Low-Medium
+ODM,Mongoose,MongoDB object modeling,"Schema validation, middleware, query building",Low-Medium
+Authentication,JWT + Next.js Middleware,Auth system,"Stateless, secure, role-based access control",Medium
+Type Safety,TypeScript,Typed JavaScript,"Type checking, better IDE support, fewer bugs",Medium
+Deployment,Vercel,Cloud platform,"Zero-config, auto-scaling, global CDN, preview deployments",Low

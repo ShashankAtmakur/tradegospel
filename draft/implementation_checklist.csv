@@ -1,0 +1,41 @@
+Phase,Task,Priority,Estimated Time,Dependencies
+Setup,Initialize Next.js 15 with TypeScript,High,15 mins,None
+Setup,"Install dependencies (ShadCN UI, Recharts, Mongoose)",High,10 mins,Next.js setup
+Setup,Configure Tailwind CSS and ShadCN UI,High,20 mins,Dependencies installed
+Setup,Set up MongoDB Atlas and get connection string,High,15 mins,None
+Setup,Create .env.local with environment variables,High,5 mins,MongoDB setup
+Backend,Create MongoDB connection utility,High,15 mins,Environment variables
+Backend,"Define Mongoose schemas (User, CVAnalysis, Feedback)",High,30 mins,MongoDB connection
+Backend,Create API routes for authentication (login/register),High,45 mins,Schemas defined
+Backend,Create API routes for analytics data,High,60 mins,Schemas defined
+Backend,Implement JWT token generation and validation,High,30 mins,Auth API routes
+Middleware,Create middleware for route protection,High,30 mins,JWT implementation
+Middleware,Implement role-based access control,High,20 mins,Route protection
+Frontend,Create dashboard layout with sidebar,High,60 mins,ShadCN UI setup
+Frontend,Build KPI cards component,High,30 mins,Dashboard layout
+Frontend,Implement country-wise user chart (Pie/Bar),High,45 mins,Charts library installed
+Frontend,Create CV analysis trend chart (Line),High,45 mins,Charts library installed
+Frontend,Build paid vs free users chart (Donut),High,45 mins,Charts library installed
+Frontend,Create career stage breakdown chart (Bar),High,30 mins,Charts library installed
+Frontend,Implement feedback analytics section,Medium,45 mins,Charts library installed
+Frontend,Build top users leaderboard table,High,30 mins,Dashboard layout
+Frontend,Create login/register pages,High,60 mins,Auth API routes
+Frontend,Implement responsive design (mobile/tablet),Medium,60 mins,All components built
+Testing,Test all API endpoints with sample data,High,30 mins,API routes complete
+Testing,Test authentication and authorization flow,High,20 mins,Middleware complete
+Testing,Test dashboard with different screen sizes,Medium,20 mins,Responsive design
+Testing,Test admin vs user access differences,High,15 mins,RBAC implemented
+Data,Seed database with sample users,High,20 mins,Schemas and API routes
+Data,Seed database with CV analysis data,High,20 mins,Schemas and API routes
+Data,Seed database with feedback data,High,15 mins,Schemas and API routes
+Documentation,Create comprehensive README.md,High,30 mins,Project complete
+Documentation,Document API endpoints,Medium,20 mins,API routes complete
+Documentation,Add setup instructions,High,15 mins,README created
+Documentation,Include demo credentials,High,5 mins,README created
+Deployment,Push code to GitHub repository,High,10 mins,Project complete
+Deployment,Deploy to Vercel,High,20 mins,GitHub push
+Deployment,Configure environment variables on Vercel,High,10 mins,Vercel deployment
+Deployment,Test deployed application,High,15 mins,Deployment complete
+Bonus,Implement real-time data updates (optional),Low,90 mins,All core features
+Bonus,Add export to CSV/PDF functionality (optional),Low,60 mins,All core features
+Bonus,Implement dark mode toggle (optional),Low,30 mins,All core features

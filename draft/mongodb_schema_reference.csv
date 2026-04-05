@@ -1,0 +1,25 @@
+Schema,Field Name,Type,Required,Description
+User Schema,_id,ObjectId,Yes,Auto-generated unique identifier
+User Schema,name,String,Yes,User's full name
+User Schema,email,String,Yes,Unique email address
+User Schema,password,String,Yes,Hashed password
+User Schema,role,String,Yes,User role: 'admin' or 'user'
+User Schema,country,String,Yes,User's country
+User Schema,careerStage,String,Yes,"Fresher, Graduate, or Experienced"
+User Schema,subscriptionType,String,Yes,paid or free
+User Schema,createdAt,Date,Yes,Account creation timestamp
+User Schema,updatedAt,Date,Yes,Last update timestamp
+CV Analysis Schema,_id,ObjectId,Yes,Auto-generated unique identifier
+CV Analysis Schema,userId,ObjectId (ref: User),Yes,Reference to User
+CV Analysis Schema,cvScore,Number,Yes,Score 0-100
+CV Analysis Schema,analysisDate,Date,Yes,Analysis timestamp
+CV Analysis Schema,skills,Array<String>,No,Extracted skills
+CV Analysis Schema,experience,Number,No,Years of experience
+CV Analysis Schema,education,String,No,Education level
+CV Analysis Schema,sections,Object,No,Score breakdown by section
+Feedback Schema,_id,ObjectId,Yes,Auto-generated unique identifier
+Feedback Schema,userId,ObjectId (ref: User),Yes,Reference to User
+Feedback Schema,rating,Number,Yes,Rating 1-5
+Feedback Schema,category,String,Yes,"UI/UX, Accuracy, Speed, Support"
+Feedback Schema,comment,String,No,User feedback comment
+Feedback Schema,createdAt,Date,Yes,Feedback timestamp
